@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="styles/styles.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>JS</title>
+	</head>
+	<script>
+	
+	function computeGrades() {
+		var projectsPrelim = parseInt(document.getElementById("projectsPrelim").value) || 0;
+		var quizPrelim = parseInt(document.getElementById("quizPrelim").value) || 0;
+		var examPrelim = parseInt(document.getElementById("examPrelim").value) || 0;
+		var prelim = (projectsPrelim + quizPrelim + examPrelim) / 3;
+		var resultPrelim = document.getElementById("prelim");
+		resultPrelim.value = prelim;
+
+        var projectsMidterm=parseInt(document.getElementById("projectsMidterm").value) || 0;
+        var quizMidterm=parseInt(document.getElementById("quizMidterm").value) || 0;
+        var examMidterm=parseInt(document.getElementById("examMidterm").value) || 0;
+        var midterm = (projectsMidterm + quizMidterm+ examMidterm) / 3;
+        var resultMidterm = document.getElementById("midterm");
+        resultMidterm.value = midterm;
+
+        var projectsPrefinal = parseInt(document.getElementById("projectsPrefinal").value) || 0;
+        var quizPrefinal = parseInt(document.getElementById("quizPrefinal").value) || 0;
+        var examPrefinal = parseInt(document.getElementById("examPrefinal").value) || 0;
+        var prefinal = (projectsPrefinal + quizPrefinal + examPrefinal) / 3;
+        var resultPrefinal = document.getElementById("prefinal");
+        resultPrefinal.value = prefinal;
+
+        var projectsFinal = parseInt(document.getElementById("projectsFinal").value) || 0;
+        var quizFinal = parseInt(document.getElementById("quizFinal").value) || 0;
+        var examFinal = parseInt(document.getElementById("examFinal").value) || 0;
+        var final = (projectsFinal + quizFinal + examFinal) / 3;
+        var resultFinal = document.getElementById("final");
+        resultFinal.value = final;
+
+        var totalAverage=(prelim *.2+ midterm *.25 + prefinal * .25 + final * .30);
+        var resultAverage=document.getElementById("average");
+        resultAverage.value=totalAverage;
+
+	}
+
+	</script>
+	<body>	
+		<h1>Grading System</h1>
+		
+		<h3>Prelim</h3>
+		<input onkeyup="computeGrades();" onkeypress="computeGrades();" id="projectsPrelim" type="text" placeholder="Projects for Prelim">
+		<input onkeyup="computeGrades();" onkeypress="computeGrades();" id="quizPrelim" type="text" placeholder="Quiz for Prelim">
+		<input onkeyup="computeGrades();" onkeypress="computeGrades();" id="examPrelim" type="text" placeholder="Exam for Prelim">
+		<input onkeyup="computeGrades();" onkeypress="computeGrades();" id="prelim" type="text">
+
+        <h3>Midterm</h3>
+		<input onkeyup="computeGrades();" onkeypress="computeGrades();" id="projectsMidterm" type="text" placeholder="Projects for Midterm">
+		<input onkeyup="computeGrades();" onkeypress="computeGrades();" id="quizMidterm" type="text" placeholder="Quiz for Midterm">
+		<input onkeyup="computeGrades();" onkeypress="computeGrades();" id="examMidterm" type="text" placeholder="Exam for Midterm">
+		<input onkeyup="computeGrades();" onkeypress="computeGrades();" id="midterm" type="text">
+		
+		<h3>Prefinal</h3>
+		<input onkeyup="computeGrades();" onkeypress="computeGrades();" id="projectsPrefinal" type="text" placeholder="Projects for Prefinal">
+		<input onkeyup="computeGrades();" onkeypress="computeGrades();" id="quizPrefinal" type="text" placeholder="Quiz for Prefinal">
+		<input onkeyup="computeGrades();" onkeypress="computeGrades();" id="examPrefinal" type="text" placeholder="Exam for Prefinal">
+		<input onkeyup="computeGrades();" onkeypress="computeGrades();" id="prefinal" type="text">
+		
+		<h3>Final</h3>
+		<input onkeyup="computeGrades();" onkeypress="computeGrades();" id="projectsFinal" type="text" placeholder="Projects for Final">
+		<input onkeyup="computeGrades();" onkeypress="computeGrades();" id="quizFinal" type="text" placeholder="Quiz for Final">
+		<input onkeyup="computeGrades();" onkeypress="computeGrades();" id="examFinal" type="text" placeholder="Exam for Final">
+		<input onkeyup="computeGrades();" onkeypress="computeGrades();" id="final" type="text">
+		
+        <br>
+<br>
+        <h3>Average</h3>
+        <input onkeyup="computeGrades();" onkeypress="computeGrades();" id="average" type="text">
+			
+	</body>
+</html>
