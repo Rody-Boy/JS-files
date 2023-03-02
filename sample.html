@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	</head>
+	<body>
+		<input type="number" onkeyup="getValue();" placeholder="Enter Value" id="input1">
+		<br>
+		<input type="number" onkeyup="getValue();" placeholder="Enter Value" id="input2">
+		<br>
+		<input type="number" onkeyup="getValue();" placeholder="Enter Value" id="input3">
+		<br>
+		<input type="number" onkeyup="getValue();" placeholder="Enter Value" id="input4">
+		<br>
+		<input type="number" onkeyup="getValue();" placeholder="Enter Value" id="input5">
+		<br>
+		<input type="number" onkeyup="getValue();" placeholder="Enter Value" id="input6">
+		<br>
+		<input type="number" onkeyup="getValue();" placeholder="Enter Value" id="input7">
+		<br>
+		<input type="number" onkeyup="getValue();" placeholder="Enter Value" id="input8">
+		<br>
+		<input type="number" onkeyup="getValue();" placeholder="Enter Value" id="input9">
+		<br>
+		<input type="number" onkeyup="getValue();" placeholder="Enter Value" id="input10">
+		<br>
+		<br>
+		<h3>Total</h3>
+		<input type="number" onkeyup="getValue()"; id="total">
+		<br>
+		<br>
+		<h3>Average</h3>
+		<input type="number" onkeyup="getValue()"; id="average">
+		<br>
+		<br>
+		<h3>25% Off</h3>
+		<input type="number" onkeyup="getValue()"; id="twentyFiveOff">
+		<br>
+		<br>
+		<h3>50% Off</h3>
+		<input type="number" onkeyup="getValue()"; id="fiftyOff">
+		<br>
+		<br>
+		
+		
+		<h3>Pay here</h3>
+		<input type="number" onkeyup="getValue();" id="payment"> 
+		
+		<br>
+		<br>
+		
+		<h3>Change</h3>
+		<input type="text"onkeyup="getvalue();" id="change">
+	</body>
+	
+<script>
+
+function getValue() {
+
+	var value1=parseInt(document.getElementById("input1").value);
+	var value2=parseInt(document.getElementById("input2").value);
+	var value3=parseInt(document.getElementById("input3").value);
+	var value4=parseInt(document.getElementById("input4").value);
+	var value5=parseInt(document.getElementById("input5").value);
+	var value6=parseInt(document.getElementById("input6").value);
+	var value7=parseInt(document.getElementById("input7").value);
+	var value8=parseInt(document.getElementById("input8").value);
+	var value9=parseInt(document.getElementById("input9").value);
+	var value10=parseInt(document.getElementById("input10").value);
+	var payment=parseInt(document.getElementById("payment").value);
+	
+	
+	//total
+	var total=value1+value2+value3+value4+value5+value6+value7+value8+value9+value10;
+	var resultTotal=document.getElementById("total");
+	resultTotal.value=total;
+	
+	//average
+	var average=total/10;
+	var resultAverage=document.getElementById("average");
+	resultAverage.value=average;
+	
+	//25%off
+	var twentyFiveOff=total-(total*(25/100));
+	var resultTwentyFiveOff=document.getElementById("twentyFiveOff");
+	resultTwentyFiveOff.value=twentyFiveOff;
+	
+	//50% Off
+	var fiftyOff=total-(total*(50/100));
+	var resultFiftyOff=document.getElementById("fiftyOff");
+	resultFiftyOff.value=fiftyOff;
+	
+	
+	//payment
+	var change=payment-total;
+	if (payment>total){
+		var resultChange=document.getElementById("change");
+		resultChange.value=change;
+	}else {
+		var resultChange=document.getElementById("change");
+		resultChange.value="Not enough payment";
+	}
+	
+}
+	
+</script>
+	
+</html>
